@@ -1,0 +1,30 @@
+using System;
+
+namespace OS_6
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int y = 0;
+            int u = 0;
+            var t = true;
+            string name = "ОЗУ (кэш-плата № )";
+            Console.WriteLine("Запуск корневого процессса:");
+            System.IO.File.WriteAllText(name, "");
+            while (t)
+            {
+                System.IO.File.AppendAllText(name, $"Рашид -гуль \n");
+                y += 1;
+                if (y > 3000)
+                {
+                    u += 1;
+                    System.IO.File.WriteAllText($"ОЗУ (кэш-плата № {u})", "");
+                    y = 0;
+                    name = $"ОЗУ (кэш-плата № {u})";
+                }
+            }
+            System.IO.File.AppendAllText(name, $"Рашид -гуль \n");
+        }
+    }
+}
